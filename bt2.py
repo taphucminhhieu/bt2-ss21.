@@ -36,3 +36,10 @@ def decode_access_token(token: str) -> dict:
 
 
 print(f"Tokken: {create_access_tokken()}")
+
+# câu hỏi bổ sung
+# Ba phần của JWT gồm Header, Payload và Signature.
+
+# Payload không được mã hóa mà chỉ mã hóa Base64URL nên ai cũng có thể đọc được.
+
+# Signature dùng để xác thực tính nguyên vẹn; nếu tự sửa role trong Payload, signature sẽ không khớp và hệ thống sẽ từ chối token.
